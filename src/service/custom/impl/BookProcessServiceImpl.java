@@ -37,7 +37,11 @@ public class BookProcessServiceImpl implements BookProcessService{
         try {
             connection.setAutoCommit(false);
             
-            BookBorrowEntity bookBorrowEntity = new BookBorrowEntity(bookBorrowDto.getBorrowId(), bookBorrowDto.getMemberId(), bookBorrowDto.getBorrowDate(), bookBorrowDto.getDueDate());
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                String date = sdf.format(new Date());
+                
+                
+            BookBorrowEntity bookBorrowEntity = new BookBorrowEntity(bookBorrowDto.getBorrowId(), bookBorrowDto.getMemberId(), date, bookBorrowDto.getDueDate());
             if(bookBorrowDao.create(bookBorrowEntity)){
                 boolean isBookBorrowDetailSaved = true;
  

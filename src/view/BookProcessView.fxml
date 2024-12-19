@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="814.0" style="-fx-background-color: #b2bec3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="-1.0" layoutY="21.0" prefHeight="74.0" prefWidth="814.0" style="-fx-background-color: #dfe4ea;" text="!    Borrow Or Return Book     !">
+         <font>
+            <Font name="High Tower Text" size="25.0" />
+         </font></Label>
+      <TableView layoutX="388.0" layoutY="141.0" prefHeight="362.0" prefWidth="105.0">
+        <columns>
+          <TableColumn prefWidth="103.0" text="Book IDs to &#10;be Borrowed" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="599.0" layoutY="302.0" prefHeight="47.0" prefWidth="128.0" style="-fx-background-color: #2ed573;" text="Return Book/ Books" />
+      <JFXButton layoutX="151.0" layoutY="405.0" prefHeight="41.0" prefWidth="142.0" style="-fx-background-color: #eccc68;" text="Borrow Book / Books" />
+      <TextField layoutX="178.0" layoutY="141.0" prefHeight="34.0" prefWidth="163.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField layoutX="178.0" layoutY="193.0" prefHeight="34.0" prefWidth="163.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField layoutX="178.0" layoutY="322.0" prefHeight="41.0" prefWidth="105.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <JFXButton layoutX="656.0" layoutY="526.0" prefHeight="41.0" prefWidth="128.0" style="-fx-background-color: #2f3542;" text="Return" textFill="WHITE" />
+      <Label alignment="CENTER" layoutX="25.0" layoutY="141.0" prefHeight="34.0" prefWidth="163.0" text="Borrow ID">
+         <font>
+            <Font name="High Tower Text" size="19.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="25.0" layoutY="193.0" prefHeight="34.0" prefWidth="163.0" text="Member ID">
+         <font>
+            <Font name="High Tower Text" size="19.0" />
+         </font>
+      </Label>
+      <TextField layoutX="178.0" layoutY="245.0" prefHeight="34.0" prefWidth="163.0" promptText="      yyyy-MM-dd">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Label alignment="CENTER" layoutX="25.0" layoutY="245.0" prefHeight="34.0" prefWidth="163.0" text="Due Date">
+         <font>
+            <Font name="High Tower Text" size="19.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="36.0" layoutY="325.0" prefHeight="34.0" prefWidth="142.0" text="Book ID">
+         <font>
+            <Font name="High Tower Text" size="19.0" />
+         </font>
+      </Label>
+      <TextField layoutX="632.0" layoutY="184.0" prefHeight="34.0" prefWidth="163.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="632.0" layoutY="236.0" prefHeight="34.0" prefWidth="163.0" promptText="Rs.">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="507.0" layoutY="184.0" prefHeight="34.0" prefWidth="114.0" text="Borrow ID">
+         <font>
+            <Font name="High Tower Text" size="19.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="507.0" layoutY="236.0" prefHeight="34.0" prefWidth="114.0" text="Fines">
+         <font>
+            <Font name="High Tower Text" size="19.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="293.0" layoutY="322.0" prefHeight="41.0" prefWidth="79.0" style="-fx-background-color: #2f3542;" text="Add Book" textFill="WHITE" />
+   </children>
+</AnchorPane>

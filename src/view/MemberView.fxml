@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="sceneNow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="814.0" style="-fx-background-color: #b2bec3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.viewController.MemberViewController">
+   <children>
+      <Label alignment="CENTER" layoutX="-1.0" layoutY="21.0" prefHeight="74.0" prefWidth="814.0" style="-fx-background-color: #dfe4ea;" text="Member  Manage">
+         <font>
+            <Font name="High Tower Text" size="25.0" />
+         </font></Label>
+      <TableView fx:id="memberTable" layoutX="388.0" layoutY="141.0" prefHeight="362.0" prefWidth="404.0">
+        <columns>
+          <TableColumn fx:id="ColID" prefWidth="51.0" text="ID" />
+          <TableColumn fx:id="ColName" prefWidth="91.0" text="Name" />
+            <TableColumn fx:id="ColPhone" prefWidth="84.0" text="Phone no." />
+            <TableColumn fx:id="ColDob" prefWidth="85.0" text="Date of birth" />
+            <TableColumn fx:id="ColAddress" prefWidth="92.0" text="Address" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnAddMember" layoutX="166.0" layoutY="408.0" onAction="#AddMember" prefHeight="47.0" prefWidth="128.0" style="-fx-background-color: #2ed573;" text="Add New Member" />
+      <JFXButton fx:id="btnUpdate" layoutX="141.0" layoutY="475.0" onAction="#UpdateMember" prefHeight="41.0" prefWidth="109.0" style="-fx-background-color: #eccc68;" text="Update" />
+      <JFXButton fx:id="btnDelete" layoutX="255.0" layoutY="475.0" onAction="#DeleteMember" prefHeight="41.0" prefWidth="109.0" style="-fx-background-color: #ff6b81;" text="Delete" />
+      <TextField fx:id="txtMemberID" layoutX="201.0" layoutY="141.0" prefHeight="34.0" prefWidth="163.0" promptText="  MXXX" />
+      <TextField fx:id="txtName" layoutX="201.0" layoutY="193.0" prefHeight="34.0" prefWidth="163.0" />
+      <TextField fx:id="txtAddress" layoutX="201.0" layoutY="342.0" prefHeight="41.0" prefWidth="163.0" />
+      <JFXButton fx:id="btnReturn" layoutX="656.0" layoutY="526.0" onAction="#ReturnBack" prefHeight="41.0" prefWidth="128.0" style="-fx-background-color: #2f3542;" text="Return" textFill="WHITE" />
+      <Label alignment="CENTER" layoutX="38.0" layoutY="141.0" prefHeight="34.0" prefWidth="163.0" text="Member ID">
+         <font>
+            <Font name="High Tower Text" size="19.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="38.0" layoutY="193.0" prefHeight="34.0" prefWidth="163.0" text="Name">
+         <font>
+            <Font name="High Tower Text" size="19.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="45.0" layoutY="346.0" prefHeight="34.0" prefWidth="150.0" text="Address">
+         <font>
+            <Font name="High Tower Text" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPhoneNo" layoutX="201.0" layoutY="245.0" prefHeight="34.0" prefWidth="163.0" promptText="  +94 7X XXXXXXX" />
+      <TextField fx:id="txtDob" layoutX="201.0" layoutY="295.0" prefHeight="34.0" prefWidth="163.0" promptText="    yyyy-MM-dd" />
+      <Label alignment="CENTER" layoutX="38.0" layoutY="245.0" prefHeight="34.0" prefWidth="163.0" text="Phone no.">
+         <font>
+            <Font name="High Tower Text" size="19.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="42.0" layoutY="299.0" prefHeight="34.0" prefWidth="163.0" text="Date of birth">
+         <font>
+            <Font name="High Tower Text" size="19.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnSearch" layoutX="24.0" layoutY="475.0" onAction="#SearchMember" prefHeight="41.0" prefWidth="109.0" style="-fx-background-color: #eccc68;" text="Search" />
+   </children>
+</AnchorPane>

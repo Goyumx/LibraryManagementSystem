@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="814.0" style="-fx-background-color: #b2bec3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.viewController.MainInterfaceController">
+   <children>
+      <JFXButton fx:id="btnManageBook" buttonType="RAISED" layoutX="75.0" layoutY="237.0" onAction="#ManageBooks" prefHeight="135.0" prefWidth="199.0" style="-fx-background-color: #475569;" text="Manage&#10; Books" textFill="WHITE">
+         <font>
+            <Font name="High Tower Text" size="27.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnBookCategory" buttonType="RAISED" layoutX="303.0" layoutY="237.0" onAction="#BookCategory" prefHeight="135.0" prefWidth="210.0" style="-fx-background-color: #475569;" text="     Manage &#10;Book Category" textFill="WHITE">
+         <font>
+            <Font name="High Tower Text" size="26.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnManageMember" buttonType="RAISED" layoutX="533.0" layoutY="237.0" onAction="#ManageMember" prefHeight="135.0" prefWidth="199.0" style="-fx-background-color: #475569;" text="Manage&#10;Members" textFill="WHITE">
+         <font>
+            <Font name="High Tower Text" size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnProcess" buttonType="RAISED" layoutX="78.0" layoutY="397.0" onAction="#Process" opacity="0.91" prefHeight="90.0" prefWidth="660.0" style="-fx-background-color: #1e293b;" text="Borrow | Return Books" textFill="WHITE">
+         <font>
+            <Font name="High Tower Text" size="35.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnLogOut" buttonType="RAISED" layoutX="612.0" layoutY="505.0" onAction="#LogOut" prefHeight="53.0" prefWidth="126.0" ripplerFill="#e1c3c3" style="-fx-background-color: #84817a;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="High Tower Text" size="19.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="75.0" layoutY="47.0" prefHeight="124.0" prefWidth="660.0" style="-fx-background-color: #485460;" text="Library Management" textFill="WHITE">
+         <font>
+            <Font name="High Tower Text" size="67.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
