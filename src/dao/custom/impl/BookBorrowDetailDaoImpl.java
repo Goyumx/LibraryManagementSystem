@@ -18,6 +18,7 @@ public class BookBorrowDetailDaoImpl implements BookBorrowDetailDao{
 
     @Override
     public boolean create(BookBorrowDetailEntity t) throws Exception {
+        //System.out.println(t);
         return CrudUtil.executeUpdate("INSERT INTO BookBorrowDetail VALUES(?,?,?)",t.getBorrowId(),t.getBookId(),t.getDueDate());
     }
     //no need

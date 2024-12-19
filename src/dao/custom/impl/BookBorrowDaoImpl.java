@@ -18,6 +18,8 @@ public class BookBorrowDaoImpl implements BookBorrowDao{
 
     @Override
     public boolean create(BookBorrowEntity t) throws Exception {
+        System.out.println(t);
+        
         return CrudUtil.executeUpdate("INSERT INTO BookBorrow VALUES(?,?,?,?,?,?)",
                 t.getBorrowId(),t.getMemberId(),t.getBorrowDate(),t.getDueDate(),t.getReturnDate(),t.getFines());
     }

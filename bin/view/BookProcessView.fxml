@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="814.0" style="-fx-background-color: #b2bec3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="sceneNow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="814.0" style="-fx-background-color: #b2bec3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.viewController.BookProcessViewController">
    <children>
       <Label alignment="CENTER" layoutX="-1.0" layoutY="21.0" prefHeight="74.0" prefWidth="814.0" style="-fx-background-color: #dfe4ea;" text="!    Borrow Or Return Book     !">
          <font>
@@ -19,7 +19,7 @@
           <TableColumn fx:id="ColBookList" prefWidth="103.0" text="Book IDs to &#10;be Borrowed" />
         </columns>
       </TableView>
-      <JFXButton fx:id="btnReturnBook" layoutX="600.0" layoutY="413.0" prefHeight="47.0" prefWidth="128.0" style="-fx-background-color: #2ed573;" text="Return Book/ Books" />
+      <JFXButton fx:id="btnReturnBook" layoutX="575.0" layoutY="427.0" onAction="#returnbook" prefHeight="47.0" prefWidth="128.0" style="-fx-background-color: #2ed573;" text="Return Book/ Books" />
       <JFXButton fx:id="btnBorrow" layoutX="178.0" layoutY="406.0" onAction="#borrowtheBook" prefHeight="41.0" prefWidth="142.0" style="-fx-background-color: #eccc68;" text="Borrow Book / Books" />
       <TextField fx:id="txtBorrowId" layoutX="178.0" layoutY="141.0" prefHeight="34.0" prefWidth="163.0">
          <font>
@@ -58,34 +58,44 @@
             <Font name="High Tower Text" size="19.0" />
          </font>
       </Label>
-      <TextField fx:id="returnBorrowId" layoutX="632.0" layoutY="184.0" prefHeight="34.0" prefWidth="142.0">
+      <TextField fx:id="returnBorrowId" layoutX="628.0" layoutY="141.0" prefHeight="34.0" prefWidth="142.0">
          <font>
             <Font size="15.0" />
          </font>
       </TextField>
-      <TextField fx:id="Fines" layoutX="611.0" layoutY="359.0" prefHeight="34.0" prefWidth="153.0" promptText="Rs.">
+      <TextField fx:id="Fines" layoutX="604.0" layoutY="369.0" prefHeight="34.0" prefWidth="153.0" promptText="Rs.">
          <font>
             <Font size="15.0" />
          </font>
       </TextField>
-      <Label alignment="CENTER" layoutX="507.0" layoutY="184.0" prefHeight="34.0" prefWidth="114.0" text="Borrow ID">
+      <Label alignment="CENTER" layoutX="507.0" layoutY="141.0" prefHeight="34.0" prefWidth="114.0" text="Borrow ID">
          <font>
             <Font name="High Tower Text" size="19.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="507.0" layoutY="359.0" prefHeight="34.0" prefWidth="114.0" text="Fines">
+      <Label alignment="CENTER" layoutX="500.0" layoutY="369.0" prefHeight="34.0" prefWidth="114.0" text="Fines">
          <font>
             <Font name="High Tower Text" size="19.0" />
          </font>
       </Label>
       <JFXButton fx:id="addBook" layoutX="293.0" layoutY="322.0" onAction="#addToList" prefHeight="41.0" prefWidth="79.0" style="-fx-background-color: #2f3542;" text="Add Book" textFill="WHITE" />
-      <JFXButton fx:id="checkdate" layoutX="587.0" layoutY="302.0" onAction="#checkborrow" prefHeight="47.0" prefWidth="153.0" style="-fx-background-color: #778beb;" text="Check Borrowed Date" />
-      <TextField fx:id="borrowedDate" layoutX="631.0" layoutY="245.0" prefHeight="34.0" prefWidth="163.0">
+      <JFXButton fx:id="checkdate" layoutX="562.0" layoutY="302.0" onAction="#checkborrow" prefHeight="47.0" prefWidth="153.0" style="-fx-background-color: #778beb;" text="Check Borrowed Date" />
+      <TextField fx:id="borrowedDate" layoutX="628.0" layoutY="193.0" prefHeight="34.0" prefWidth="163.0">
          <font>
             <Font size="15.0" />
          </font>
       </TextField>
-      <Label alignment="CENTER" layoutX="500.0" layoutY="245.0" prefHeight="34.0" prefWidth="128.0" text="Borrowed Date">
+      <Label alignment="CENTER" layoutX="500.0" layoutY="193.0" prefHeight="34.0" prefWidth="128.0" text="Borrowed Date">
+         <font>
+            <Font name="High Tower Text" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="memberId" layoutX="626.0" layoutY="245.0" prefHeight="34.0" prefWidth="142.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="505.0" layoutY="245.0" prefHeight="34.0" prefWidth="114.0" text="Member ID">
          <font>
             <Font name="High Tower Text" size="19.0" />
          </font>

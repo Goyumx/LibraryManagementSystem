@@ -12,11 +12,12 @@ import service.custom.BookProcessService;
  *
  * @author goyum
  */
-public class BookProcess {
+public class BookProcessController {
     
     private BookProcessService bookProcessService = (BookProcessService)ServiceFactory.getInstance().getService(ServiceFactory.ServiceType.BOOK_PROCESS);
     
     public String borrowBook(BookBorrowDto bookBorrowDto)throws Exception{
+        
         return bookProcessService.borrowBook(bookBorrowDto);
         
     }
@@ -25,7 +26,7 @@ public class BookProcess {
         return bookProcessService.returnBook(borrowId, Fines);
     }
 
-    public BookBorrowDto chechDate(String boorowId) throws Exception{
+    public BookBorrowDto checkDate(String boorowId) throws Exception{
         return bookProcessService.CheckDate(boorowId);
     }
 }
