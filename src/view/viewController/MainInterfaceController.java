@@ -35,6 +35,8 @@ public class MainInterfaceController {
 
     @FXML
     void BookCategory(ActionEvent event)throws IOException {
+        stage=(Stage)scenePane.getScene().getWindow();
+        stage.close();
         Parent root = FXMLLoader.load(this.getClass().getResource("/view/BookCategoryView.fxml"));
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
@@ -46,7 +48,6 @@ public class MainInterfaceController {
     void LogOut(ActionEvent event)throws IOException {
 
         stage=(Stage)scenePane.getScene().getWindow();
-
         stage.close();
 
         Parent root = FXMLLoader.load(this.getClass().getResource("/view/LoginView.fxml"));
@@ -59,6 +60,10 @@ public class MainInterfaceController {
 
     @FXML
     void ManageBooks(ActionEvent event) throws IOException{
+
+        stage=(Stage)scenePane.getScene().getWindow();
+        stage.close();
+
         Parent root = FXMLLoader.load(this.getClass().getResource("/view/BookView.fxml"));
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
@@ -68,6 +73,8 @@ public class MainInterfaceController {
 
     @FXML
     void ManageMember(ActionEvent event)throws IOException {
+        stage=(Stage)scenePane.getScene().getWindow();
+        stage.close();
         Parent root = FXMLLoader.load(this.getClass().getResource("/view/MemberView.fxml"));
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
@@ -77,6 +84,8 @@ public class MainInterfaceController {
 
     @FXML
     void Process(ActionEvent event) throws IOException {
+        stage=(Stage)scenePane.getScene().getWindow();
+        stage.close();
         Parent root = FXMLLoader.load(this.getClass().getResource("/view/BookProcessView.fxml"));
         Stage stage = new Stage();
         stage.setScene(new Scene(root));

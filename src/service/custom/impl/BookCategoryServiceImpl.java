@@ -60,10 +60,9 @@ public class BookCategoryServiceImpl implements BookCategoryService{
     }
     
     private BookCategoryEntity getBookCategoryEntity(BookCategoryDto bookCategoryDto){
-        return new BookCategoryEntity(
-                
-                bookCategoryDto.getCategoryId(),
+        return new BookCategoryEntity( 
                 bookCategoryDto.getCategoryName(),
+                bookCategoryDto.getCategoryId(),               
                 bookCategoryDto.getCategoryDesc());
                 
     }

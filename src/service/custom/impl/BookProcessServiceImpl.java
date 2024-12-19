@@ -14,6 +14,7 @@ import dto.BookBorrowDto;
 import entity.BookBorrowDetailEntity;
 import entity.BookBorrowEntity;
 import entity.BookEntity;
+import javafx.scene.control.Alert;
 import service.custom.BookProcessService;
 import java.sql.Connection;
 import java.text.SimpleDateFormat;
@@ -137,6 +138,7 @@ public class BookProcessServiceImpl implements BookProcessService{
                     if(isBookUpdated){
                         connection.commit();
                         return "Return Processed Successfully!";
+                        
                     } else{
                         connection.rollback();
                         return "Book Statees Changing Error";
@@ -158,6 +160,22 @@ public class BookProcessServiceImpl implements BookProcessService{
             
             connection.setAutoCommit(true);
         }
+    }
+
+
+
+    @Override
+    public BookBorrowDto CheckDate(String borrowId) throws Exception {
+        BookBorrowEntity bookBorrowEntity = bookBorrowDao.get(borrowId);
+        if(bookBorrowEntity!=null){
+            return geBookBorrowDto(bookBorrowEntity);
+        }
+        return null;
+    }
+
+    public BookBorrowDto geBookBorrowDto(BookBorrowEntity bookBorrowEntity){
+        BookBorrowDto bookBorrowDto = new BookBorrowDto(bookBorrowEntity.getBorrowId(), bookBorrowEntity.getMemberId(), bookBorrowEntity.getBorrowDate(), bookBorrowEntity.getDueDate(), null); 
+        return bookBorrowDto;
     }
     
 }

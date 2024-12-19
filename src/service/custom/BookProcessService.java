@@ -14,6 +14,7 @@ import service.SuperService;
 public interface BookProcessService extends SuperService{
     
     String borrowBook(BookBorrowDto bookBorrowDto)throws Exception;
+    BookBorrowDto CheckDate(String borrowId) throws Exception;
     String returnBook(String borrowId, double Fines) throws Exception;
     
 }

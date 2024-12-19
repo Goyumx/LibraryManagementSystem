@@ -24,4 +24,8 @@ public class BookProcess {
     public String returnBook(String borrowId, double Fines) throws Exception {
         return bookProcessService.returnBook(borrowId, Fines);
     }
+
+    public BookBorrowDto chechDate(String boorowId) throws Exception{
+        return bookProcessService.CheckDate(boorowId);
+    }
 }
