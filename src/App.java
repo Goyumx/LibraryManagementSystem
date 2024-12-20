@@ -13,7 +13,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        URL resource = getClass().getResource("./view/MainInterface.fxml");// fxml file resource
+        URL resource = getClass().getResource("./view/LoginView.fxml");// fxml file resource
         Parent root = FXMLLoader.load(resource);// load the resource
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
